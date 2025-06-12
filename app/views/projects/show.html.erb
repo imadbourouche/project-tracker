@@ -1,0 +1,13 @@
+<% content_for :title, "Project Details" %>
+<h1 class="mb-4">Project Details</h1>
+
+<div class="card shadow-sm p-4">
+  <%= render @project %>
+</div>
+
+<div class="mt-4">
+  <% if user_signed_in? %>
+    <%= link_to "Edit this project", edit_project_path(@project), class: "btn btn-info me-2" %>
+  <% end %>
+  <%= link_to "Back to projects", projects_path, class: "btn btn-secondary" %>
+</div>
